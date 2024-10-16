@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style(1).css">
+    <title>If I was born 10 years earlier, I would have married you</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="sub-container">
+                <nav>
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <a class="nav-link" href="#">H</a>
+                    <a class="nav-link" href="#">A</a>
+                    <a class="nav-link" href="#">C</a>
+                    <a class="nav-link" href="#">H</a>
+                    <a class="nav-link" href="#">I</a>
+                </nav>
+                <div class="content-container">
+                    <div class="content">
+                        <div class="title">
+                            <span>τρίτος</span>
+                            RANK
+                        </div>
+                        <span>Mr. Most Hated Guy in the Entire School A.K.A</span>
+                        <h2><span>Hachiman&nbsp;Hikigaya</span> <small>(比企谷 八幡)</small></h2>
+                        <p>Hachiman Hikigaya (比企谷 八幡) is the main protagonist of Yahari Ore no Seishun Love Come
+                            wa Machigatteiru as well as the viewpoint character of the series.
+                            He is a student in Class 2F of Sōbu High School and the second member of the Service Club.
+                        </p>
+                    </div>
+                    <div class="side-nav">
+                        <a href="" class="side-nav-link active">Apperance</a>
+                        <a href="" class="side-nav-link">Personality</a>
+                        <a href="" class="side-nav-link">Abilities</a>
+                        <a href="" class="side-nav-link">Social Suicides</a>
+                        <a href="" class="side-nav-link">Quotes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="character">
+                <img src="images/f 2.png" alt="">
+            </div>
+        </div>
+        <div class="main-video">
+            <video autoplay="autoplay" muted loop>
+                <source src="video/video.mp4" type="video/mp4" /> #'THIS IS 4K ANIME (My Teen Romantic Comedy)' by baldshine
+            </video>
+        </div>
+    </main>
+
+    <div class="loader">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"> </script>
+    <script>
+        let element = document.querySelector(".content h2 span");
+        let text = element.textContent;
+        let splitTextElement = document.createElement("div");
+        splitTextElement.classList.add("split-text");
+        for (let i = 0; i < text.length; i++) {
+            let char = text.charAt(i);
+            let span = document.createElement("span");
+            span.textContent = char;
+            splitTextElement.appendChild(span);
+        }
+        element.parentNode.replaceChild(splitTextElement, element);
+
+        $('.container').tilt({
+            maxTilt: 2,
+            maxGlare: .5
+        })
+        
+        gsap.to(".loader .top", {
+            x: 500,
+            y: -500,
+            duration: 2,
+            delay: 1
+        })
+        gsap.to(".loader .bottom", {
+            x: -500,
+            y: 500,
+            duration: 2,
+            delay: 1
+        })
+        gsap.to(".loader .logo", {
+            opacity: 0,
+            delay: 2,
+            duration: 1,
+            display: "none"
+        })
+        gsap.to(".loader", {
+            opacity: 0,
+            delay: 3,
+            duration: 1,
+            display: "none"
+        })
+        gsap.to(".split-text span", {
+            y: 0,
+            opacity: 1,
+            delay: 3,
+            stagger: 0.05
+        });
+        gsap.from(".content p", {
+            y: 100,
+            opacity: 0,
+            delay: 3,
+            duration: 1
+        });
+        gsap.from(".character img", {
+            y: 200,
+            opacity: 0,
+            delay: 3,
+            duration: 1,
+            ease: "power2.outIn"
+        });
+    </script>
+</body>
+
+</html>
