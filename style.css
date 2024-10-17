@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -16,42 +16,21 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main::after{
-    content: "";
-    background: #030129;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
 .container{
     width: 80vw;
-    height: 80vh;
+    height: 50vh;
     position: relative;
     z-index: 5;
     border-radius: 20px;
-    border: 2px solid #0A214B;
+    border: 2px solid #566b83;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.5),
                 -5px -5px 20px rgba(0,0,0,0.1);
-    margin-top: 80px;     
+    margin-top: 80px;
 }
 
 .container::after{
     content: "";
-    background: #0A214B;
+    background: #343c3f;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -72,18 +51,40 @@ main::after{
     padding: 2rem;  
 }
 
-.video{
+.main-video{
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
 }
 
-.video video{
+.main-video video{
     filter: blur(10px);
 }
 
-main-image{
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main::after{
+    content: "";
+    background: #343c3f;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.main-video{
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -91,9 +92,9 @@ main-image{
     z-index: -2;
 }
 
-.main-image img{
+.main-video video{
     width: 100%;
-    filter: blur(60px);
+    filter: blur(10px);
 }
 
 nav{
@@ -114,7 +115,7 @@ nav .logo{
 nav .logo img{
     width: 100%;
     object-fit: contain;
-    filter: brightness(0) invert(0.7);
+    filter: brightness(0) invert(0.9);
 }
 
 .nav-link{
@@ -125,15 +126,14 @@ nav .logo img{
 .character{
     position: absolute;
     z-index: 3;
-    height: 95vh;
-    bottom: -2px;
-    right: 22vw;
+    height: 100vh;
+    right: 0vw;
+    transform: translateY(-305px);
 }
 
 .character img{
-    height: 100%;
+    height: 81%;
     object-fit: contain;
-    /* filter: hue-rotate(75deg) grayscale(40%) opacity(0.9); */
 }
 
 .content-container{
@@ -183,11 +183,13 @@ nav .logo img{
     margin-bottom: 30px;
 }
 
+
 .title span{
     font-size: 60px;
     color: #DFDD73;
     -webkit-text-stroke: 1px #fff;
 }
+
 
 .side-nav{
     width: 65%;
@@ -231,7 +233,7 @@ nav .logo img{
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background: #030129;
+    background: #343c3f;
     z-index: 10;
 }
 
@@ -240,7 +242,7 @@ nav .logo img{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #17144e;
+    background-color: #8ea2b3;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
   }
   
@@ -249,7 +251,7 @@ nav .logo img{
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-color: #0d0c19;
+    background-color:  	#566b83;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
 
@@ -257,7 +259,6 @@ nav .logo img{
     position: absolute;
     z-index: 10;
     width: 200px;
-    filter: brightness(0) invert(1);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);

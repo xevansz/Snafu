@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finding fault in people</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(1).css">
+    <title>If I was born 10 years earlier, I would have married you</title>
 </head>
-<body>
 
+<body>
     <main>
         <div class="container">
             <div class="sub-container">
@@ -15,18 +16,13 @@
                     <div class="logo">
                         <img src="images/logo.png" alt="">
                     </div>
-                    <a href="" class="nav-link">H</a>
-                    <a href="" class="nav-link">A</a>
-                    <a href="" class="nav-link">C</a>
-                    <a href="" class="nav-link">H</a>
-                    <a href="" class="nav-link">I</a>
+                    <a class="nav-link" href="#">H</a>
+                    <a class="nav-link" href="#">A</a>
+                    <a class="nav-link" href="#">C</a>
+                    <a class="nav-link" href="#">H</a>
+                    <a class="nav-link" href="#">I</a>
                 </nav>
-                <div class="main-video">
-                    <video autoplay="autoplay" muted loop>
-                        <source src="video/video.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="content-containter">
+                <div class="content-container">
                     <div class="content">
                         <div class="title">
                             <span>τρίτος</span>
@@ -34,7 +30,10 @@
                         </div>
                         <span>Mr. Most Hated Guy in the Entire School A.K.A</span>
                         <h2><span>Hachiman&nbsp;Hikigaya</span> <small>(比企谷 八幡)</small></h2>
-                        <p>Hachiman Hikigaya (比企谷 八幡) is the main protagonist of Yahari Ore no Seishun Love Come wa Machigatteiru as well as the viewpoint character of the series. He is a student in Class 2F of Sōbu High School and the second member of the Service Club.</p>
+                        <p>Hachiman Hikigaya (比企谷 八幡) is the main protagonist of Yahari Ore no Seishun Love Come
+                            wa Machigatteiru as well as the viewpoint character of the series.
+                            He is a student in Class 2F of Sōbu High School and the second member of the Service Club.
+                        </p>
                     </div>
                     <div class="side-nav">
                         <a href="" class="side-nav-link active">Apperance</a>
@@ -49,8 +48,10 @@
                 <img src="images/avatar.png" alt="">
             </div>
         </div>
-        <div class="main-image">
-            <img src="images/bg.jpg" alt="">
+        <div class="main-video">
+            <video autoplay="autoplay" muted loop>
+                <source src="video/video.mp4" type="video/mp4" /> #'THIS IS 4K ANIME (My Teen Romantic Comedy)' by baldshine
+            </video>
         </div>
     </main>
 
@@ -73,7 +74,7 @@
         let text = element.textContent;
         let splitTextElement = document.createElement("div");
         splitTextElement.classList.add("split-text");
-        for (let i=0; i<text.length; i++) {
+        for (let i = 0; i < text.length; i++) {
             let char = text.charAt(i);
             let span = document.createElement("span");
             span.textContent = char;
@@ -130,6 +131,6 @@
             ease: "power2.outIn"
         });
     </script>
-
 </body>
+
 </html>
