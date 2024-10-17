@@ -51,14 +51,14 @@ body{
     padding: 2rem;  
 }
 
-.video{
+.main-video{
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
 }
 
-.video video{
+.main-video video{
     filter: blur(10px);
 }
 

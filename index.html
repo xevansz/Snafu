@@ -21,7 +21,7 @@
                     <a href="" class="nav-link">H</a>
                     <a href="" class="nav-link">I</a>
                 </nav>
-                <div class="video">
+                <div class="main-video">
                     <video autoplay="autoplay" muted loop>
                         <source src="video/video.mp4" type="video/mp4" />
                     </video>
@@ -38,15 +38,15 @@
                     </div>
                     <div class="side-nav">
                         <a href="" class="side-nav-link active">Apperance</a>
-                        <a href="" class="side-nav-link active">Personality</a>
-                        <a href="" class="side-nav-link active">Abilities</a>
-                        <a href="" class="side-nav-link active">Social Suicides</a>
-                        <a href="" class="side-nav-link active">Quotes</a>
+                        <a href="" class="side-nav-link">Personality</a>
+                        <a href="" class="side-nav-link">Abilities</a>
+                        <a href="" class="side-nav-link">Social Suicides</a>
+                        <a href="" class="side-nav-link">Quotes</a>
                     </div>
                 </div>
             </div>
             <div class="character">
-                <img src="images/f.png" alt="">
+                <img src="images/avatar.png" alt="">
             </div>
         </div>
         <div class="main-image">
@@ -62,17 +62,19 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"> </script>
     <script>
         let element = document.querySelector(".content h2 span");
         let text = element.textContent;
-        let splitTextElement = document.createElement("span");
+        let splitTextElement = document.createElement("div");
         splitTextElement.classList.add("split-text");
         for (let i=0; i<text.length; i++) {
-            let cha = text.charAt(i);
+            let char = text.charAt(i);
             let span = document.createElement("span");
             span.textContent = char;
             splitTextElement.appendChild(span);
